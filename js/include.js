@@ -1,24 +1,23 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
-    try {
-        const response = await fetch("components/layout.html");
-        const html = await response.text();
-        document.getElementById("layout").innerHTML = html;
+    async function load(id, file) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+    }
 
-        // Highlight active page
-        const currentFile = window.location.pathname.split("/").pop();
+    await load("nav", "components/nav.html");
+    await load("footer", "components/footer.html");
 
-        const homeLink = document.querySelector(".link.home");
-        const socialsLink = document.querySelector(".link.socials");
+    const currentFile = window.location.pathname.split("/").pop();
 
-        if (currentFile === "social.html") {
-            socialsLink?.classList.add("current");
-        } else {
-            homeLink?.classList.add("current");
-        }
+    const homeLink = document.querySelector(".link.home");
+    const socialsLink = document.querySelector(".link.socials");
 
-    } catch (error) {
-        console.error("Failed to load layout:", error);
+    if (currentFile === "social.html") {
+        socialsLink?.classList.add("current");
+    } else {
+        homeLink?.classList.add("current");
     }
 
 });
