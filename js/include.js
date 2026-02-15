@@ -1,22 +1,24 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
     try {
-        const res = await fetch("components/layout.html");
-        const html = await res.text();
+        const response = await fetch("components/layout.html");
+        const html = await response.text();
         document.getElementById("layout").innerHTML = html;
 
-        const path = window.location.pathname;
+        // Highlight active page
+        const currentFile = window.location.pathname.split("/").pop();
+
         const homeLink = document.querySelector(".link.home");
         const socialsLink = document.querySelector(".link.socials");
 
-        if (path.includes("social")) {
+        if (currentFile === "social.html") {
             socialsLink?.classList.add("current");
         } else {
             homeLink?.classList.add("current");
         }
 
-    } catch (err) {
-        console.error("Layout failed to load:", err);
+    } catch (error) {
+        console.error("Failed to load layout:", error);
     }
 
 });
