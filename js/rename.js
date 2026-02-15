@@ -1,7 +1,15 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
     async function loadLayout() {
-        const res = await fetch("/components/layout.html");
+
+        // Determine correct path depth automatically
+        let pathToComponents = "components/layout.html";
+
+        if (window.location.pathname.includes("/socials/")) {
+            pathToComponents = "../components/layout.html";
+        }
+
+        const res = await fetch(pathToComponents);
         const html = await res.text();
         document.getElementById("layout").innerHTML = html;
 
