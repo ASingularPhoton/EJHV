@@ -147,11 +147,10 @@ textarea {
 .gridType {
     padding-top: 10em;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-evenly;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    min-height: 100vh;
     vertical-align: middle;
     background-color: black;
     text-align: center;
