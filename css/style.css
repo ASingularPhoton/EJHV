@@ -106,20 +106,22 @@ h3.mobile {
 }
 
 .copyright {
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
     bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding: 1em 0;
     z-index: 2;
 }
 
 .copyright.stuck {
     position: relative;
     bottom: auto;
-    width: 100vw;
+    width: 100%;
 }
 
 .copyrightLabel {
