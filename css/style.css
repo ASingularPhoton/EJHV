@@ -98,13 +98,11 @@ a.current:hover {
     margin-bottom: 0.25rem;
 }
 
-.pageSubtitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    text-align: center;
+.pageSubtitle,
+h3 {
+ color: gray;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
 }
 
 .subtitle-left,
