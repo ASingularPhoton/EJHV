@@ -111,9 +111,24 @@ h3 {
     margin-top: 1rem;
 }
 
+.profile-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.profile-image {
+    max-width: 12rem;
+}
+
 .profile-image .pfp {
-    width: min(16rem, 90vw);
+    width: 100%;
     border-radius: 1rem;
+}
+
+.profile-text {
+    max-width: 36rem;
 }
 
 .copyright {
