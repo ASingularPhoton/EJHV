@@ -127,8 +127,10 @@ h3 {
 
 .profile-image .pfp {
     width: 100%;
-    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 1rem;
+    display: block;
 }
 
 .profile-text {
