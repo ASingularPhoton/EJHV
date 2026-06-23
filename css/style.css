@@ -112,19 +112,22 @@ h3 {
 }
 
 .profile-images {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(12rem, 1fr));
     gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 30rem;
 }
 
 .profile-image {
-    max-width: 12rem;
+    width: 100%;
 }
 
 .profile-image .pfp {
     width: 100%;
+    max-width: 100%;
     border-radius: 1rem;
 }
 
