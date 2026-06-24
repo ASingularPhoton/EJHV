@@ -295,18 +295,18 @@ textarea {
 
 
 .mobrule-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .mobrule-gif {
-    max-width: min(800px, 90vw);
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  border-radius: 0;
+  display: block;
 }
 
 .splitTitle {
@@ -317,6 +317,13 @@ textarea {
   width: 100%;
   max-width: 60rem;
   margin: 0 auto 1.5rem;
+  color: gray; /* ensure base color stays */
+}
+
+.splitTitle .left,
+.splitTitle .right,
+.splitTitle .divider {
+  color: gray;
 }
 
 .splitTitle .left {
@@ -329,9 +336,4 @@ textarea {
   justify-self: start;
   text-align: left;
   padding-left: 1rem;
-}
-
-.splitTitle .divider {
-  justify-self: center;
-  color: gray;
 }
