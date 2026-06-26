@@ -112,9 +112,11 @@ h3 {
 }
 
 .desc {
-    font-weight: bold;
-    font-size: 1rem;
-    max-width: 50rem;
+    font-weight: 400;
+    font-size: 1.05rem;
+    max-width: 70rem;
+    width: 100%;
+    line-height: 1.7;
 }
 
 .profile {
