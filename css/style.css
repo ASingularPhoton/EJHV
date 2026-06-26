@@ -293,20 +293,30 @@ textarea {
     }
 }
 
+/* Mob Rule */
 
 .mobrule-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+    width: 100%;
+    min-height: calc(100vh - 6rem); /* Accounts for the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    overflow: hidden;
 }
 
 .mobrule-gif {
-  width: 100vw;
-  max-width: 100vw;
-  height: auto;
-  border-radius: 0;
-  display: block;
+    display: block;
+    width: auto;
+    height: auto;
+
+    /* Keep the entire GIF visible */
+    max-width: 100%;
+    max-height: calc(100vh - 8rem);
+
+    object-fit: contain;
+    border-radius: 0;
 }
 
 .splitTitle {
